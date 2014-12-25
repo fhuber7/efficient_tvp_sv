@@ -9,6 +9,7 @@ ntot <- nsave+nburn # total draws
 #Standardize data
 #factors_dat <- lapply(fac_list,standardize)
 #now retrieve group specific factors and create a large X matrix
+Rcpp::sourceCpp('carter_kohn_cpp.cpp')
 
 #Xraw <-  read.table("~/Dropbox/UNI/PhD/Fiscal Multiplier in Financial Crises/R_project/dataset.csv", sep=";", quote="\"")#read.table("C:/Users/Flo/Google Drive/UNI/PhD/Fiscal Multiplier in Financial Crises/R_project/dataset.csv", sep=";", quote="\"")
 Xraw <- read.csv("~/Dropbox/efficient_tvp_sv/mudata.csv", header=FALSE)
